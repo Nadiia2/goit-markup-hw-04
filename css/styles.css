@@ -80,6 +80,9 @@ p {
   gap: 332px;
 }
 .header {
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
   border-bottom: 1px solid #e7e9fc;
 }
 .nav-list {
@@ -110,7 +113,7 @@ p {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   opacity: 0;
   width: 100%;
   height: 4px;
@@ -118,6 +121,7 @@ p {
   transition: transform 250ms linear;
   transform: scaleX(0);
   background-color: #404bbf;
+  border-radius: 2px;
 }
 
 .navigation:hover::after,
@@ -196,6 +200,7 @@ p {
   min-width: 169px;
   height: 56px;
   border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
 .button:focus {
@@ -221,7 +226,20 @@ p {
   justify-content: center;
   gap: 24px;
 }
-
+.section-two-border-icon {
+  position: relative;
+  max-width: 264px;
+  height: 112px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  background: #f4f4fd;
+  margin-bottom: 8px;
+}
+.section-two-icon {
+  position: static;
+  transform: translate(35%, 15%);
+}
 /* section-three  */
 .section-three {
   background-color: #f4f4fd;
@@ -322,6 +340,25 @@ p {
   flex-direction: column;
   align-items: flex-start;
   flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  color: #f4f4fd;
+  line-height: 1.5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  position: absolute;
+  transform: translateY(100%);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.section-four-item:hover .overlay {
+  transform: translateY(-120px);
 }
 .section-four-item:hover {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
