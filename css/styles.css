@@ -239,7 +239,7 @@ p {
   margin-bottom: 8px;
   display: flex;
   align-items: center;
-  align-content: center;
+  justify-content: center;
 }
 .section-two-icon {
   position: absolute;
